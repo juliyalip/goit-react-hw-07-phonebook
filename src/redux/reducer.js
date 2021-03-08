@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit';
+import types from './contact-types'
 
 import * as action from './contact-action'
 
@@ -21,8 +22,9 @@ const contactsReduser = createReducer(
 )
 
 
-const filterReduser = ('', {
-  [action.changleFilter]: (_, {payload}) => payload
+
+const filterReduser = createReducer('', {
+    [action.changleFilter]: (_, {payload}) => payload
 })
 
  
@@ -30,3 +32,5 @@ export default combineReducers({
     contacts: contactsReduser, //описывается объект state за свойство контакт отвечает contacts
     filter: filterReduser
 })
+
+
