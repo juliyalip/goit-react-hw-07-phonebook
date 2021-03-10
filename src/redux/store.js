@@ -1,15 +1,20 @@
-//import { createStore } from 'redux';
+//import { persistStore, persistReducer } from 'redux-persist';
+//import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-//import { composeWithDevTools } from 'redux-devtools-extension';
-import logger from 'redux-logger'
 
-import rootReduser from './reducer'
+import logger from 'redux-logger';
 
 
-//const store = createStore(reducer, composeWithDevTools());
+import rootReduser from './reducer';
 
 
-const middleware = [...getDefaultMiddleware(), logger ]
+
+
+
+const middleware = [...getDefaultMiddleware(),
+  logger];
+
+
 
 const store = configureStore({
     reducer: rootReduser,
@@ -18,7 +23,9 @@ devTools: process.env.NODE_ENV === 'development'}
 )
 
 
-export default store
+
+
+export default store;
 
 
 

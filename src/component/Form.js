@@ -36,7 +36,7 @@ import 'react-toastify/dist/ReactToastify.css';
     const { onAdd } = this.props;
    const isValedeForm = this.validateForm();
    if (!isValedeForm) return;
-    onAdd({ id: shortid.generate(), name, number });
+        onAdd({name, number});
     this.reset();
   };
 
@@ -103,7 +103,7 @@ const mapStateToProps = state => ({
 
 
 const mapDispatchToProps = dispatch => ({
-  onAdd: (newContact) => dispatch(actions.addContact(newContact)),
+  onAdd: (name, number) => dispatch(actions.addContact(name, number)),
  
 
 

@@ -1,3 +1,39 @@
 {
-    "contacts": []
+  "contacts": [
+    {
+      "name": "Rosie Simpson",
+      "number": "5555235",
+      "id": 1
+    },
+    {
+      "name": "Switzerland",
+      "number": "5555235",
+      "id": 2
+    },
+    {
+      "name": "Switzerland",
+      "number": "4222",
+      "id": 3
+    },
+    {
+      "name": "Switzerland",
+      "number": "55552357888",
+      "id": 4
+    },
+    {
+      "name": "Switzerland",
+      "number": "55552357888",
+      "id": 5
+    },
+    {
+      "name": "Switzerland",
+      "number": "55552357888",
+      "id": 6
+    },
+    {
+      "name": "Switzerland",
+      "number": "5555235",
+      "id": 7
+    }
+  ]
 }
