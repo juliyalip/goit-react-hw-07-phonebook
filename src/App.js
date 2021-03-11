@@ -16,7 +16,8 @@ import {connect} from 'react-redux'
 
 import {CSSTransition} from 'react-transition-group'
 
- class App extends Component {
+class App extends Component {
+
 
 
 
@@ -25,6 +26,9 @@ import {CSSTransition} from 'react-transition-group'
     return (
       <>
         <div className="container">
+
+         
+          
 
         <CSSTransition
           in={true}
