@@ -8,23 +8,13 @@ import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import './component/contact.css'
-
 import {connect} from 'react-redux'
-
-
-
 
 import {CSSTransition} from 'react-transition-group'
 
-class App extends Component {
 
-
-
-
-  render() {
-
-    return (
-      <>
+  function App ({ contacts }) {
+  return(  <>
         <div className="container">
 
          
@@ -44,11 +34,14 @@ class App extends Component {
           <Form />
 
           <h2>Contacts</h2>
-      
+      <CSSTransition in={contacts.length > 1}
+      timeout={250} unmountOnExit>
 
-              <Filter />
+            <Filter />
             
-          <CSSTransition in={this.props.contacts.length > 0}
+            </CSSTransition>
+            
+          <CSSTransition in={contacts.length > 0}
           appear={true} timeout={250} unmountOnExit
           >
          <Contacts />  
@@ -61,10 +54,11 @@ class App extends Component {
           <ToastContainer autoClose={3000} position="top-left"/> 
          
         </div>
-      </>
-    );
-  }
- }
+      </>)
+}
+
+
+ 
 
 const mapStateToProps = state =>( {
    contacts: state.contacts
