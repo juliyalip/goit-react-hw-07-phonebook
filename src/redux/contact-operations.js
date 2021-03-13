@@ -3,13 +3,22 @@ import * as actions from './contact-action';
 
 axios.defaults.baseURL = ' http://localhost:4040';
 
-export const fetchContact = () => dispatch => {
-    dispatch(actions.fetchContatcReguest());
 
-    axios.get('/contacts')
-        .then(({ data }) => dispatch(actions.fetchContatcReguest(data)))
-        .catch(error => dispatch(actions.fetchContactError(error)))
+ export const fetchContact = () => async dispatch => {
+     dispatch(actions.fetchContatcReguest());
+
+    try {
+       const { data } = await axios.get('/contacts');
+
+        dispatch(actions.fetchContactSuccess(data));
+
+          } catch (error) {
+        dispatch(actions.fetchContactError(error))
+          }
+
 }
+
+
 
 
 

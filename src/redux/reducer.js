@@ -42,7 +42,7 @@ const filterReduser = createReducer('', {
 
 
 export default combineReducers({
-    contacts: contactsReduser, //описывается объект state за свойство контакт отвечает contacts
+    contacts: contactsReduser, 
     filter: filterReduser,
     loading: loadingReduser
 })
