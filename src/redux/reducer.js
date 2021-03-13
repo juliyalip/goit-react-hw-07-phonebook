@@ -21,12 +21,14 @@ const contactsReduser = createReducer([], {
 
 
 const loadingReduser = createReducer(false, {
-    [fetchContatcReguest]: () => true,
+    [fetchContatcReguest]: () => false,
     [fetchContactSuccess]: () => false,
-   [fetchContactError]: () => false,
+    [fetchContactError]: () => false,
+   
     [addContatcReguest]: () => true,
     [addContactSuccess]: () => false,
     [addContactError]: () => false,
+
     [deleteContactReguest]: () => true,
     [deleteContactSuccess]: () => false,
     [deleteContactError]: () => false

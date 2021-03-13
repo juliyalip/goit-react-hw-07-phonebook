@@ -7,11 +7,11 @@ const fetchContacts = () => {
 }
 
 const addContact = contact => {
-    return axios.post('/contact', contact).then(({data}) => data)
+    return axios.post('/contacts', contact).then(({data}) => data)
 }
 
 const deleteContact = contactId => {
-    return axios.delete(`/todos/${contactId}`)
+    return axios.delete(`/contacts/${contactId}`)
 };
 
 

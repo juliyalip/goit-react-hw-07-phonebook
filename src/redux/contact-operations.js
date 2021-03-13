@@ -30,7 +30,7 @@ export const addContact = ({ name, number} ) => dispatch => {
 export const deleteContact = contactId => dispatch => {
     dispatch(actions.deleteContactReguest())
 
-    axios.delete(`/todos/${contactId}`)
+    axios.delete(`/contacts/${contactId}`)
         .then(() => dispatch(actions.deleteContactSuccess(contactId)))
     .catch(error => dispatch(actions.deleteContactError(error)))
 

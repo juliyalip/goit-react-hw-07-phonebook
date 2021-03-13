@@ -43,13 +43,14 @@ class App extends Component {
         
           <Form />
 
-          <h2>Contacts</h2>
-      <CSSTransition in={contacts.length > 1}
+        <h2>Contacts</h2>
+        
+ <CSSTransition in={contacts.length > 1}
       timeout={250} unmountOnExit>
-
-            <Filter />
-            
-            </CSSTransition>
+          <Filter />
+        </CSSTransition>
+        
+        {this.props.isLoading && <h1>Загружаем ...</h1>}
             
           <CSSTransition in={contacts.length > 0}
           appear={true} timeout={250} unmountOnExit
@@ -72,7 +73,8 @@ class App extends Component {
  
 
 const mapStateToProps = state => ({
-  contacts: state.contacts
+  contacts: state.contacts,
+  isLoading: state.loading
 }
 );
 
