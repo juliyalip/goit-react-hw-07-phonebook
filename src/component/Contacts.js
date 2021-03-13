@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import * as actions from '../redux/contact-action'
+import * as operation from '../redux/contact-operations'
 
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
@@ -58,7 +58,7 @@ const mapStateToProps = state => {
 
 
 const mapDispatchToProps = dispatch => ({
-onDelete: (id) => dispatch(actions.deleteContact(id))
+onDelete: (id) => dispatch(operation.deleteContact(id))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps )(Contacts);

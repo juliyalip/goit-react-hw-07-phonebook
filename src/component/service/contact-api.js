@@ -13,6 +13,11 @@ const addContact = contact => {
 const deleteContact = contactId => {
     return axios.delete(`/todos/${contactId}`)
 };
+
+
+
+
+
 const contactAPI = { fetchContacts, addContact, deleteContact };
 
 export default contactAPI

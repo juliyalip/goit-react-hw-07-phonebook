@@ -1,54 +1,6 @@
 {
   "contacts": [
     {
-      "name": {
-        "id": "JC-XbO4-t",
-        "name": "poli",
-        "number": "125-58-64"
-      },
-      "id": 1
-    },
-    {
-      "name": {
-        "id": "ehBa3WKai",
-        "name": "mango",
-        "number": "145-87-63"
-      },
-      "id": 2
-    },
-    {
-      "name": {
-        "id": "fHiL51KFI",
-        "name": "kiwi",
-        "number": "145"
-      },
-      "id": 3
-    },
-    {
-      "name": {
-        "id": "vgB386NJK",
-        "name": "kiwi",
-        "number": "2222"
-      },
-      "id": 4
-    },
-    {
-      "name": {
-        "id": "3Q7Mk6mIh",
-        "name": "loli",
-        "number": "123"
-      },
-      "id": 5
-    },
-    {
-      "name": {
-        "id": "GRInsw6du",
-        "name": "Rosie Simpson",
-        "number": "55552357888"
-      },
-      "id": 6
-    },
-    {
       "name": "Гость",
       "number": "785",
       "id": 7
@@ -57,6 +9,31 @@
       "name": "veronika",
       "number": "234",
       "id": 8
+    },
+    {
+      "name": "poli",
+      "number": "4522",
+      "id": 9
+    },
+    {
+      "name": "vika",
+      "number": "145",
+      "id": 10
+    },
+    {
+      "name": "kiwi",
+      "number": "123",
+      "id": 11
+    },
+    {
+      "name": "kiwi",
+      "number": "233",
+      "id": 12
+    },
+    {
+      "name": "Татьяна",
+      "number": "78-95-63",
+      "id": 13
     }
   ]
 }

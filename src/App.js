@@ -8,18 +8,28 @@ import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import './component/contact.css'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux';
+
+import {fetchContact} from './redux/contact-operations'
+
 
 import {CSSTransition} from 'react-transition-group'
 
 
-  function App ({ contacts }) {
-  return(  <>
+class App extends Component {
+
+  componentDidMount(){
+    this.props.contactView()
+  }
+    
+ render() {
+   const { contacts } = this.props
+   
+  return (
+       <>
         <div className="container">
 
-         
-          
-
+        
         <CSSTransition
           in={true}
           appear={true}
@@ -48,20 +58,29 @@ import {CSSTransition} from 'react-transition-group'
                     
             </CSSTransition>
    
-      
-          
+     
       
           <ToastContainer autoClose={3000} position="top-left"/> 
          
         </div>
-      </>)
+      </>
+    )
+  }
 }
 
 
  
 
-const mapStateToProps = state =>( {
-   contacts: state.contacts
- }
-)
-export default connect(mapStateToProps)(App);
+const mapStateToProps = state => ({
+  contacts: state.contacts
+}
+);
+
+
+const mapDispatchToProps = dispatch => ({
+  contactView: ()=> dispatch(fetchContact()) 
+})
+  
+  
+  
+export default connect(mapStateToProps, mapDispatchToProps)(App);

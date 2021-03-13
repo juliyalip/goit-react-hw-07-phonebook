@@ -1,29 +1,35 @@
 import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit';
-import {addContatcReguest, addContactSuccess, addContactError, deleteContact, changleFilter } from './contact-action';
+import {
+    addContatcReguest, addContactSuccess, addContactError,
+    deleteContactReguest, deleteContactSuccess,  deleteContactError,
+    changleFilter, fetchContatcReguest, fetchContactSuccess, fetchContactError
+} from './contact-action';
 
 
 
 
-const contactsReduser = createReducer([
-    { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
-    { id: "id-2", name: "Hermione Kline", number: "443-89-12" },
-    { id: "id-3", name: "Eden Clements", number: "645-17-79" },
-    { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
-], {
+const contactsReduser = createReducer([], {
+    [fetchContatcReguest]: (_, {payload}) => payload,
 
     [addContactSuccess]: (state, { payload }) => [...state, payload],
 
-    [deleteContact]: (state, { payload }) =>
+    [deleteContactSuccess]: (state, { payload }) =>
         state.filter(({ id }) =>     id !== payload)
 }
 )
 
 
 const loadingReduser = createReducer(false, {
+    [fetchContatcReguest]: () => true,
+    [fetchContactSuccess]: () => false,
+   [fetchContactError]: () => false,
     [addContatcReguest]: () => true,
     [addContactSuccess]: () => false,
-    [addContactError]: () => false
+    [addContactError]: () => false,
+    [deleteContactReguest]: () => true,
+    [deleteContactSuccess]: () => false,
+    [deleteContactError]: () => false
 })
 
  
