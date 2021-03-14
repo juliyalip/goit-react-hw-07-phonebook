@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { connect } from 'react-redux';
-import shortid from "shortid";
+
 import PropTypes from "prop-types";
 import * as contactOperetions from '../redux/contact-operations'
 import selectors from '../redux/contacts-selectors'
@@ -36,7 +36,7 @@ import 'react-toastify/dist/ReactToastify.css';
     const { onAdd } = this.props;
    const isValedeForm = this.validateForm();
    if (!isValedeForm) return;
-    onAdd({ id: shortid.generate(), name, number });
+    onAdd({ name, number });
     this.reset();
   };
 

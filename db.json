@@ -1,9 +1,44 @@
 {
   "contacts": [
     {
-      "name": "Switzerland",
-      "number": "1222",
-      "id": 1
+      "name": "Marinka",
+      "number": "45-65-89",
+      "id": 2
+    },
+    {
+      "name": "Vikylya",
+      "number": "785-45-96",
+      "id": 3
+    },
+    {
+      "name": "Misha",
+      "number": "159-85-25",
+      "id": 4
+    },
+    {
+      "name": "Varya",
+      "number": "124-32-12",
+      "id": 5
+    },
+    {
+      "name": "misha",
+      "number": "125-65-45",
+      "id": 6
+    },
+    {
+      "name": "Юлія",
+      "number": "124-65-56",
+      "id": 7
+    },
+    {
+      "name": "Юлія",
+      "number": "2233",
+      "id": 8
+    },
+    {
+      "name": "Pusha",
+      "number": "124-56-98",
+      "id": 9
     }
   ]
 }
