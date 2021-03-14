@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import * as operation from '../redux/contact-operations'
-
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
-
+import selectors from '../redux/contacts-selectors';
 import  "./contact.css";
 
 
@@ -43,19 +42,9 @@ Contacts.propTypes = {
 };
 
 
-const mapStateToProps = state => {
+const mapStateToProps = state =>( {
+    persons: selectors.getVisibleContact(state)})
   
-  const { filter, contacts } = state;
-  const normalizeFilter = filter.toLowerCase();
-
-  const visibleContacts = contacts.filter((contact) => 
-    contact.name.toLowerCase().includes(normalizeFilter),
-  )
-  
-  return {
-  persons: visibleContacts}}
-  
-
 
 const mapDispatchToProps = dispatch => ({
 onDelete: (id) => dispatch(operation.deleteContact(id))

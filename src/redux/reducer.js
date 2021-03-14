@@ -10,7 +10,7 @@ import {
 
 
 const contactsReduser = createReducer([], {
-    [fetchContatcReguest]: (_, {payload}) => payload,
+    [fetchContactSuccess]: (_, {payload}) => payload,
 
     [addContactSuccess]: (state, { payload }) => [...state, payload],
 

@@ -1,19 +1,20 @@
 import { Component } from "react";
 import "./index.css";
+import { connect } from 'react-redux';
+import {fetchContact} from './redux/contact-operations'
+import { CSSTransition } from 'react-transition-group';
+
 import Contacts from "./component/Contacts";
 import Filter from "./component/Filter";
 import Form from "./component/Form";
 
+import selectors from './redux/contacts-selectors'
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import './component/contact.css'
-import { connect } from 'react-redux';
-
-import {fetchContact} from './redux/contact-operations'
 
 
-import {CSSTransition} from 'react-transition-group'
 
 
 class App extends Component {
@@ -73,8 +74,8 @@ class App extends Component {
  
 
 const mapStateToProps = state => ({
-  contacts: state.contacts,
-  isLoading: state.loading
+  contacts: selectors.getContacts(state),
+  isLoading: selectors.getLoading(state)
 }
 );
 

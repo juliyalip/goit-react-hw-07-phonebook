@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import shortid from "shortid";
 import PropTypes from "prop-types";
 import * as contactOperetions from '../redux/contact-operations'
-
+import selectors from '../redux/contacts-selectors'
 import s from "./form.module.css";
 
 import {  toast } from 'react-toastify';
@@ -98,7 +98,7 @@ import 'react-toastify/dist/ReactToastify.css';
 }
 
 const mapStateToProps = state => ({
-  contacts: state.contacts
+  contacts: selectors.getContacts(state)
 })
 
 

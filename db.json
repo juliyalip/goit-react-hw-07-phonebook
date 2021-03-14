@@ -1,29 +1,9 @@
 {
   "contacts": [
     {
-      "name": "veronika",
-      "number": "234",
-      "id": 8
-    },
-    {
-      "name": "poli",
-      "number": "4522",
-      "id": 9
-    },
-    {
-      "name": "vika",
-      "number": "145",
-      "id": 10
-    },
-    {
-      "name": "kiwi",
-      "number": "233",
-      "id": 12
-    },
-    {
-      "name": "лика",
-      "number": "125-89-65",
-      "id": 13
+      "name": "Switzerland",
+      "number": "1222",
+      "id": 1
     }
   ]
 }
