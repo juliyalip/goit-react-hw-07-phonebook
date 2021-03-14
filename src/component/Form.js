@@ -51,7 +51,9 @@ import Duplicate from './Duplicate'
     const contacts = this.props.contacts;
     if (contacts.some(contact => contact.name === name)) {
       this.setState({ error: true })
-      setTimeout(()=> this.setState({error: false}), 1000)
+      setTimeout(() => this.setState({ error: false }), 1000)
+      this.reset();
+      return
 }
     return true;
   };
