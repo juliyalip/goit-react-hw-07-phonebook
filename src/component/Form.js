@@ -6,13 +6,15 @@ import * as contactOperetions from '../redux/contact-operations'
 import selectors from '../redux/contacts-selectors'
 import s from "./form.module.css";
 
-import {  toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Duplicate from './Duplicate'
+
+
 
  class Form extends Component {
   state = {
     name: "",
     number: "",
+    error: false
     
   };
 
@@ -48,7 +50,8 @@ import 'react-toastify/dist/ReactToastify.css';
     }
     const contacts = this.props.contacts;
     if (contacts.some(contact => contact.name === name)) {
-  return toast.error("Контакт уже есть")
+      this.setState({ error: true })
+      setTimeout(()=> this.setState({error: false}), 1000)
 }
     return true;
   };
@@ -70,6 +73,9 @@ import 'react-toastify/dist/ReactToastify.css';
  
 
     return (
+      <>
+        {this.state.error && <Duplicate />}
+
       <form onSubmit={this.handleFormSubmit} className={s.form}>
         <label className={s.input}>
           Name
@@ -92,7 +98,8 @@ import 'react-toastify/dist/ReactToastify.css';
           />
         </label>
         <button type="submit">Add contact</button>
-      </form>
+        </form>
+        </>
     );
   }
 }

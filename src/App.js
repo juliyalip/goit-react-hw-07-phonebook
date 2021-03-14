@@ -9,8 +9,7 @@ import Filter from "./component/Filter";
 import Form from "./component/Form";
 
 import selectors from './redux/contacts-selectors'
-import { ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 import './component/contact.css'
 
@@ -61,9 +60,7 @@ class App extends Component {
             </CSSTransition>
    
      
-      
-          <ToastContainer autoClose={3000} position="top-left"/> 
-         
+                   
         </div>
       </>
     )
